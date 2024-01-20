@@ -7,7 +7,7 @@ const Skillbox = (props) => {
     return (
         <>
             <div className='border-[#808080] border-2 border-solid w-full sm:w-1/4 p-2 mx-2 rounded my-2'>
-                <div className='my-2'><h1 className='font-semibold'>{props.type}</h1></div>
+                <div className='my-2 mx-2'><h1 className='font-semibold'>{props.type}</h1></div>
                 <div className={`flex flex-wrap `}>
                     {
                         props.skills.map((item) => {
