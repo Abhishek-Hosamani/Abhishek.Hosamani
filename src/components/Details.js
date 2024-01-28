@@ -43,7 +43,7 @@ const details = {
 export const skillset = [
     {
         type: 'Languages',
-        skills: ['C', 'C++', 'Python', 'SQL']
+        skills: ['C', 'C++', 'Python', 'SQL', "Html", "CSS", "JavaScript"]
     },
     {
         type: 'Frontend',
