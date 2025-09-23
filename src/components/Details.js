@@ -47,7 +47,7 @@ export const skillset = [
     },
     {
         type: 'Frontend',
-        skills: ['ReactJS', 'Bootstrap', 'Tailwindcss']
+        skills: ['ReactJS', 'Bootstrap', 'Tailwindcss', 'Redux']
     },
     {
         type: 'Backend and Database',

@@ -1,47 +1,63 @@
-import './App.css';
-import ProjectCard from './components/ProjectCard';
-import Navabar from './components/navabar';
+import React from 'react';
+import { ThemeProvider } from './contexts/ThemeContext';
+import Navigation from './components/Navigation';
+import Header from './components/Header';
+import Skills from './components/Skills';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Education from './components/Education';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import { useScrollAnimation } from './hooks/useScrollAnimation';
 
-import { Projects } from './components/Details';
-import Skillbox from './components/Skillbox';
-import { skillset } from './components/Details';
 function App() {
+  const [headerRef, headerVisible] = useScrollAnimation();
+  const [aboutRef, aboutVisible] = useScrollAnimation();
 
-  const headingstyles = `text-base sm:text-xl font-semibold my-6 text-center underline underline-offset-4`
   return (
-    <>
-      <div className='mx-8'>
-        <Navabar />
-        <h2 className={headingstyles}>
-          My Projects
-        </h2>
-        <div className='flex flex-col sm:flex-row flex-wrap justify-around ml-4'>
+    <ThemeProvider>
+      <div className="min-h-screen theme-transition" style={{ backgroundColor: 'var(--bg-primary)' }}>
+        <Navigation />
 
-          {Projects.map((item) => {
+        <main>
+          <section id="home" ref={headerRef}>
+            <Header />
+          </section>
 
-            return (
-              <div className='sm:mx-8 mt-4 sm:mt-0'>
-                <ProjectCard tech={item.TechStack} ProjName={item.ProjectName} img={item.CoverImage} link={item.repolink} />
+          <section id="about" ref={aboutRef}>
+            <div
+              className={`py-20 theme-transition ${aboutVisible ? 'animate-fadeInUp' : 'opacity-0'}`}
+              style={{ backgroundColor: 'var(--bg-secondary)' }}
+            >
+              <div className="max-w-6xl mx-auto px-6 text-center">
+                <h2
+                  className="text-4xl font-bold mb-8 theme-transition"
+                  style={{ color: 'var(--text-primary)' }}
+                >
+                  About Me
+                </h2>
+                <p
+                  className="text-lg max-w-3xl mx-auto leading-relaxed theme-transition"
+                  style={{ color: 'var(--text-secondary)' }}
+                >
+                  I'm a passionate Software Engineer with expertise in Full Stack Development and AI/ML.
+                  Currently working at SproutsAi on autonomous interview scheduling and AI-assisted tools.
+                  I love building innovative solutions and contributing to the tech community through research and development.
+                </p>
               </div>
-            )
-          })}
-        </div>
+            </div>
+          </section>
 
-        <div>
-          <h2 className={headingstyles}>What I Know</h2>
+          <Skills />
+          <Experience />
+          <Projects />
+          <Education />
+          <Contact />
+        </main>
 
-          <div className='flex flex-wrap justify-center'>
-            {skillset.map((item, ind) => {
-              return (
-                <Skillbox index={ind} skills={item.skills} type={item.type} />
-              )
-            }
-            )}
-          </div>
-        </div>
+        <Footer />
       </div>
-
-    </>
+    </ThemeProvider>
   );
 }
 

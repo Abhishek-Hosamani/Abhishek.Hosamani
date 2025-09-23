@@ -4,7 +4,7 @@ const ProjectCard = (props) => {
     const [expanded, setExpanded] = useState(false);
 
     const textClasses = `cursor-pointer overflow-ellipsis`;
-    const containerClasses = `w-full mx-auto sm:w-72 ${expanded ? 'h-auto' : 'h-56'} h-56 overflow-hidden text-ellipsis flex flex-col justify-start rounded rounded-4 bg-[#FFF]`;
+    const containerClasses = `ProjectCard w-full mx-auto sm:w-72 ${expanded ? 'h-auto' : 'h-56'} h-56 overflow-hidden text-ellipsis flex flex-col justify-start rounded rounded-4 bg-[#3a3942]`;
     const handleCont = () => {
         setExpanded(!expanded);
     };
@@ -18,7 +18,7 @@ const ProjectCard = (props) => {
                     </a>
                 </div>
 
-                <div className='bg-[#FFF] text-[#000] p-2 text-wrap'>
+                <div className='bg-[#3a3942]  p-2 text-wrap text-[#FFF]'>
                     <p className='font-bold text-sm sm:text-base'>{props.ProjName}</p>
                     <p className={`${textClasses} text-xs sm:text-sm ${expanded ? '' : 'line-clamp-2'}`}>
                         {props.tech}
