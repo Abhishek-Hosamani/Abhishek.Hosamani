@@ -8,11 +8,11 @@ const ThemeToggle = () => {
     return (
         <button
             onClick={toggleTheme}
-            className="relative p-3 rounded-lg transition-all duration-300 ease-in-out hover:scale-110 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
+            className="relative p-1 rounded-lg transition-all duration-300 ease-in-out hover:scale-110 "
             style={{
                 backgroundColor: isDarkMode ? 'rgba(55, 65, 81, 0.5)' : 'rgba(229, 231, 235, 0.5)',
                 backdropFilter: 'blur(10px)',
-                border: `1px solid ${isDarkMode ? 'rgba(75, 85, 99, 0.3)' : 'rgba(209, 213, 219, 0.3)'}`,
+                // border: `1px solid ${isDarkMode ? 'rgba(75, 85, 99, 0.3)' : 'rgba(209, 213, 219, 0.3)'}`,
             }}
             aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
         >
@@ -22,7 +22,7 @@ const ThemeToggle = () => {
                     className="w-6 h-6 transition-all duration-500 ease-in-out"
                     style={{
                         color: isDarkMode ? '#fbbf24' : '#1e40af',
-                        transform: isDarkMode ? 'rotate(0deg)' : 'rotate(180deg)',
+                        transform: isDarkMode ? 'rotate(0deg)' : 'rotate(90deg)',
                     }}
                 />
             </div>

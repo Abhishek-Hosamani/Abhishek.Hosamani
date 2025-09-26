@@ -9,7 +9,7 @@ export const personalInfo = {
     // phone: "6362197359",
     linkedin: "https://www.linkedin.com/in/abhishekhosamani04",
     github: "https://github.com/Abhishek-Hosamani",
-    location: "Hubli, India",
+    location: "Banglore, India",
     bio: "Currently working as Software Engineer at SproutsAi and working on autonomous interview scheduling, AI-assisted tools in sprouts platform.",
     profileImage: require('../assets/NewImage.jpg')
 };
