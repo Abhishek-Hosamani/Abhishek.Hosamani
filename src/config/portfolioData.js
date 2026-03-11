@@ -10,16 +10,16 @@ export const personalInfo = {
     linkedin: "https://www.linkedin.com/in/abhishekhosamani04",
     github: "https://github.com/Abhishek-Hosamani",
     location: "Banglore, India",
-    bio: "Currently working as Software Engineer at SproutsAi and working on autonomous interview scheduling, AI-assisted tools in sprouts platform.",
+    bio: "Backend-focused Software Engineer with 1+ year of experience building scalable, production-grade systems. Currently at SproutsAI working on AI-powered interview autoscheduling, analytics chatbot integrations, and automation workflows at scale.",
     profileImage: require('../assets/NewImage.jpg')
 };
 
 export const skills = {
-    languages: ["C", "C++", "Python", "JavaScript", "HTML5", "CSS", "SQL"],
+    languages: ["C", "C++", "Java", "Python", "JavaScript", "TypeScript", "HTML5", "CSS", "SQL"],
     frontend: ["ReactJs", "Redux", "Bootstrap", "Tailwindcss"],
-    backend: ["Nodejs", "Flask", "Express", "REST API"],
-    databases: ["MongoDB", "Microsoft SQL Server"],
-    others: ["Deep Learning", "AI/ML", "OOPs", "Data Structures and Algorithms", "Github"]
+    backend: ["Java Spring Boot", "Nodejs", "Flask", "Express", "REST API", "Webhooks"],
+    databases: ["MongoDB", "Microsoft SQL Server", "Redis"],
+    others: ["Deep Learning", "AI/ML", "OOPs", "Data Structures and Algorithms", "Microservices", "System Design", "RabbitMQ", "CI/CD", "Postman", "Jira", "Figma", "Github"]
 };
 
 export const experience = [
@@ -30,8 +30,13 @@ export const experience = [
         location: "California, USA (Remote)",
         period: "12/2024 - Present",
         description: [
-            "Majorly working on autonomous interview scheduling, AI assisted Interview agent tool, candidate reachout through whatsapp on sprouts platform.",
-            "Skills: ReactJs, Nodejs, Tailwindcss, Express, Redux, MongoDb, Webhooks, Gen-AI"
+            "Owned and delivered an AI-powered interview autoscheduling system end-to-end, automating interview booking, rescheduling, and cancellations similar to Calendly, reducing manual recruiter coordination by 70%.",
+            "Designed and implemented bulk interview scheduling, enabling 1000+ interviews supported in a single flow using free/busy window computation and validating feasibility for scheduling while preventing overlapping meetings.",
+            "Implemented rate-limiting and fault-tolerant API handling for Google Calendar integrations using Redis, eliminating HTTP 429 errors during peak usage.",
+            "Built interviewer availability templatization with timezone normalization and slot-locking, reducing repeated availability setup by 60%.",
+            "Implemented scheduling sequence configuration allowing recruiters to attach custom email workflows with 100% fallback reliability to default templates.",
+            "Designed and integrated a universal analytics chatbot service, cutting future chatbot integration effort by 50%.",
+            "Skills: Java, Spring Boot, ReactJs, Nodejs, Tailwindcss, Express, Redux, MongoDb, Redis, Google Calendar API, Webhooks, Gen-AI"
         ],
         current: true
     },
@@ -42,9 +47,10 @@ export const experience = [
         location: "California, USA (Remote)",
         period: "06/2024 - 11/2024",
         description: [
-            "Implemented user interfaces and APIs for modules such as Interview Feedback, Review Candidates, Pipeline View, and Candidate Details in main product.",
-            "Developed a workflow to synchronize availabilities and schedule interviews between candidates and interviewers and save time by 60%-70%.",
-            "Skills: Reactjs, Nodejs, Tailwindcss, Express, Redux, MongoDb, Figma"
+            "Built production UI modules including Interview Feedback, Candidate Review, Pipeline View, and Candidate Details.",
+            "Implemented availability synchronization workflows, saving 60-70% operational effort.",
+            "Integrated candidate and interviewer services via REST APIs.",
+            "Skills: Java, Spring Boot, ReactJs, Nodejs, Tailwindcss, Express, Redux, MongoDb, Figma"
         ],
         current: false
     },
@@ -55,9 +61,9 @@ export const experience = [
         location: "Hyderabad, India",
         period: "01/2024 - 05/2024",
         description: [
-            "Worked primarily on AI-Assisted Web Text Editor for writing test specifications.",
-            "Designed and developed Microservices architecture for existing system, improved the system performance by 30% and 2x increase in the throughput of test specification generation.",
-            "Skills: ReactJs, Redux, Tailwindcss, Flask, SQL, Microsoft SQL Server, Full stack development"
+            "Built an AI-assisted web editor for writing software test specifications.",
+            "Migrated a monolithic system to microservices architecture, improving system performance by 30% and 2x increase in throughput of test specification generation.",
+            "Skills: Java, Spring Boot, ReactJs, Redux, Tailwindcss, Flask, SQL, Microsoft SQL Server"
         ],
         current: false
     }
@@ -67,8 +73,8 @@ export const projects = [
     {
         id: 1,
         name: "Hybrid Quantization Tool",
-        description: "A tool to optimize Deep Neural Networks (DNNs) using low-bit quantization techniques to compress and optimize DNN models by approximately 1/4th of original size with insignificant accuracy drops around ~5-6%, making them efficient and deploying them on resource-constrained devices like mobile phones.",
-        techStack: ["Python", "PyTorch", "Quantization", "Deep Learning", "ML"],
+        description: "A tool to optimize Deep Neural Networks (DNNs) using low-bit quantization techniques. Reduced DNN model size by 75% with under 6% accuracy loss, making them efficient for deployment on resource-constrained edge and mobile devices.",
+        techStack: ["Python", "PyTorch", "Quantization", "Deep Learning", "ML", "Computer Vision"],
         image: require('../assets/quantization.jpg'),
         githubLink: null,
         liveLink: null,
@@ -77,8 +83,8 @@ export const projects = [
     {
         id: 2,
         name: "Sree Dhaneshwari Automobiles",
-        description: "An ecommerce platform for retail shop for automobiles spare parts. Developed a web based platform for quick ordering of spare parts, features like adding, updating and deleting products. Solution increased the order rates by approximately 50%.",
-        techStack: ["ReactJS", "NodeJs", "MongoDb", "Firebase", "TailwindCSS"],
+        description: "Full-stack e-commerce platform for an automobile spare parts retail shop. Implemented role-based authentication, scalable REST APIs, and product management features. Increased store order rate by 50%.",
+        techStack: ["ReactJS", "NodeJs", "Express", "MongoDb", "Firebase", "TailwindCSS"],
         image: require('../assets/sda.png'),
         githubLink: "https://github.com/Abhishek-Hosamani/SreeDaneshwariAutomobiles",
         liveLink: null,
@@ -87,8 +93,8 @@ export const projects = [
     {
         id: 3,
         name: "InsightKLETech",
-        description: "Website for KLE Tech students to connect and explore all the college activities. Created a student platform for managing and notifying college club and research activities, community for like minded talents, one stop place to explore the research works of faculty and join different specialized laboratories.",
-        techStack: ["ReactJS", "NodeJs", "MongoDb", "TailwindCSS", "MaterialUI"],
+        description: "Centralized web platform for KLE Tech students to explore college clubs, research labs, and events. Designed and implemented backend REST APIs to manage users, clubs, notifications, and research listings. Improved discoverability by consolidating fragmented college information into a single system.",
+        techStack: ["ReactJS", "NodeJs", "MongoDb", "TailwindCSS", "MaterialUI", "REST API"],
         image: require('../assets/IUCEE.png'),
         githubLink: "https://github.com/Abhishek-Hosamani/IUCEE-Front-End-dev",
         liveLink: null,
@@ -181,7 +187,7 @@ export const socialLinks = {
 export const siteConfig = {
     title: "Abhishek Hosamani - Software Engineer",
     description: "Portfolio of Abhishek Hosamani - Full Stack Developer, AI/ML Engineer",
-    keywords: ["Software Engineer", "Full Stack Developer", "React", "Node.js", "AI/ML", "Deep Learning"],
+    keywords: ["Software Engineer", "Full Stack Developer", "Backend Engineer", "Java", "Spring Boot", "React", "Node.js", "AI/ML", "Deep Learning", "Microservices"],
     author: "Abhishek Hosamani",
     theme: {
         primaryColor: "#3a3942",

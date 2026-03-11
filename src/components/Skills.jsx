@@ -12,8 +12,10 @@ const Skills = () => {
         // Languages
         'C': 'simple-icons:c',
         'C++': 'simple-icons:cplusplus',
+        'Java': 'devicon:java',
         'Python': 'simple-icons:python',
         'JavaScript': 'simple-icons:javascript',
+        'TypeScript': 'simple-icons:typescript',
         'HTML5': 'simple-icons:html5',
         'CSS': 'simple-icons:css3',
         'SQL': 'simple-icons:mysql',
@@ -25,20 +27,30 @@ const Skills = () => {
         'Tailwindcss': 'simple-icons:tailwindcss',
 
         // Backend
+        'Java Spring Boot': 'devicon:spring',
         'Nodejs': 'simple-icons:nodedotjs',
         'Flask': 'simple-icons:flask',
         'Express': 'simple-icons:express',
-        'REST API': 'simple-icons:rest',
+        'REST API': 'simple-icons:fastapi',
+        'Webhooks': 'mdi:webhook',
 
         // Databases
         'MongoDB': 'simple-icons:mongodb',
         'Microsoft SQL Server': 'simple-icons:microsoftsqlserver',
+        'Redis': 'simple-icons:redis',
 
         // Others
         'Deep Learning': 'simple-icons:tensorflow',
         'AI/ML': 'simple-icons:opencv',
-        'OOPs': 'simple-icons:java',
+        'OOPs': 'devicon:java',
         'Data Structures and Algorithms': 'simple-icons:leetcode',
+        'Microservices': 'mdi:sitemap',
+        'System Design': 'mdi:application-cog',
+        'RabbitMQ': 'devicon:rabbitmq',
+        'CI/CD': 'devicon:githubactions',
+        'Postman': 'simple-icons:postman',
+        'Jira': 'simple-icons:jira',
+        'Figma': 'simple-icons:figma',
         'Github': 'simple-icons:github'
     };
 
@@ -113,6 +125,7 @@ const Skills = () => {
                                             <Icon
                                                 icon={skillIcons[skill]}
                                                 className="w-4 h-4"
+                                                style={{ filter: 'grayscale(1) brightness(1.8)' }}
                                             />
                                         )}
                                         {skill}

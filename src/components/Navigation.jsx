@@ -48,12 +48,7 @@ const Navigation = () => {
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex items-center">
-                        <span
-                            className="text-2xl font-bold theme-transition"
-                            style={{ color: colors.text.primary }}
-                        >
-                            <span style={{ color: colors.text.accent }}>A</span>bhishek
-                        </span>
+
                     </div>
 
                     {/* Desktop Navigation */}
