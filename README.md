@@ -34,6 +34,7 @@ src/
 
 All portfolio data is centralized in `src/config/portfolioData.js`. This makes it easy to update your information without touching the component code.
 
+
 ### Available Configuration Sections:
 
 #### Personal Information
