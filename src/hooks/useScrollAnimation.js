@@ -23,8 +23,9 @@ export const useScrollAnimation = (threshold = 0.1) => {
         }
 
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
+            const node = ref.current;
+            if (node) {
+                observer.unobserve(node);
             }
         };
     }, [threshold]);
@@ -60,8 +61,9 @@ export const useStaggeredAnimation = (items, delay = 100) => {
         }
 
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
+            const node = ref.current;
+            if (node) {
+                observer.unobserve(node);
             }
         };
     }, [items, delay]);

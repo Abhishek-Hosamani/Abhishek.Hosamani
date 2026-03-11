@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 import { useScrollAnimation } from './hooks/useScrollAnimation';
 
 function App() {
-  const [headerRef, headerVisible] = useScrollAnimation();
+  const [headerRef] = useScrollAnimation();
   const [aboutRef, aboutVisible] = useScrollAnimation();
 
   return (
