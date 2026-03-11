@@ -18,12 +18,12 @@ export const useScrollAnimation = (threshold = 0.1) => {
             }
         );
 
-        if (ref.current) {
-            observer.observe(ref.current);
+        const node = ref.current;
+        if (node) {
+            observer.observe(node);
         }
 
         return () => {
-            const node = ref.current;
             if (node) {
                 observer.unobserve(node);
             }
@@ -56,12 +56,12 @@ export const useStaggeredAnimation = (items, delay = 100) => {
             }
         );
 
-        if (ref.current) {
-            observer.observe(ref.current);
+        const node = ref.current;
+        if (node) {
+            observer.observe(node);
         }
 
         return () => {
-            const node = ref.current;
             if (node) {
                 observer.unobserve(node);
             }
